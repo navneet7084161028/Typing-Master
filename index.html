@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        header{
+            color: white;
+            background-color: black;
+            height: 22vh;
+            padding-top: 50px;
+            text-align: center;
+        }
+        .main{
+            text-align: center;
+        }
+        .intro{
+            color: white;
+            background-color: teal;
+            padding-top: 40px;
+            height: 22vh;
+            line-height: 1.3em;
+            text-align:center;
+        }
+        .test-area{
+            background-color: grey;
+            height: 60vh;
+            padding: 20px;
+        }
+        #original-text{
+            width: 700px;
+            background-color:#f3f3f3;
+            margin: auto;
+            border: .5px solid black;
+            border-radius: 6px;
+            line-height: 1.3em;
+            padding-top: 1%;
+            font-size: 25px;
+        }
+        .original{
+            display: none;
+        }
+        .test-wrapper{  
+            margin: auto;
+            padding: 20px;
+        }
+        #text-area{
+            width: 700px;
+            border: 10px solid black;
+            border-radius: 10px;
+            background-color:#d2d2d2;
+            height: 170px;
+            font-size: 25px;
+        }
+        #timer{
+            font-size: 35px;
+            font-weight: bolder;
+        }
+        #reset{
+            font-size: 30px;
+            border: 5px solid #FF1493;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #FF1493;
+        }
+
+    </style>
+
+</head>
+<body>
+        <header>
+            <h1>Test Your Typing Speed</h1>
+        </header>
+            <div class="main">
+
+                <div class="intro">
+                <article>
+                    <p>This is a typing test. Your goal is to be duplicate the provided text, EXACTLY,<br>
+                         in the field below. The timer starts when you start typing, and only stops<br>
+                        when you match this text exactly. Good Luck!</p>
+                </article>
+            </div>
+            <section class="test-area">
+                <div id="original-text" class="original"></div>
+
+                <div class="test-wrapper">
+                    <textarea id="text-area" name="" row="4" col="10" placeholder="Please type here to start the game..."onkeypress="start()" onkeyup="compare()" onfocus="random()"></textarea>
+                </div>
+                    <div id="clock">
+                        <div id="timer">00:00:00</div>
+                    </div>
+                    <button id="reset" onclick="disp()" >Start Over</button>
+
+            </section>
+        </div>
+</body>
+<script src="type.js"></script>
+</html>
